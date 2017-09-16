@@ -14,7 +14,14 @@ module.exports = {
         query: {
           presets: ['es2015', 'react']
         }
-      }
+      },
+      {
+        test: /\.css$/,
+        loader: "style-loader!css-loader"
+      },
     ]
   },
+  plugins: [
+   new webpack.HotModuleReplacementPlugin()
+ ]
 };
